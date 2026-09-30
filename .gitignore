@@ -11,7 +11,7 @@ dist
 *.jsonl
 
 # Data
-data/train_dataset/*
+data/
 # Editor
 .idea
 *.swp
@@ -19,6 +19,7 @@ data/train_dataset/*
 # Other
 .DS_Store
 wandb
+data
 output
 work_dirs
 model_zoo
