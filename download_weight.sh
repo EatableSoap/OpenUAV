@@ -2,7 +2,7 @@
 
 set -e
 
-BASE_DIR="${BASE_DIR:-/root/autodl-tmp}"
+BASE_DIR="${BASE_DIR:-"$HOME/Exp"}"
 TRAVEL_ROOT="${BASE_DIR}/OpenUAV"
 
 LLAMA_ROOT="${TRAVEL_ROOT}/Model/LLaMA-UAV"
@@ -11,7 +11,7 @@ MODEL_ZOO="${LLAMA_ROOT}/model_zoo"
 LAVIS_DIR="${MODEL_ZOO}/LAVIS"
 WORK_DIR="${LLAMA_ROOT}/work_dirs"
 
-HF_ENDPOINT="${HF_ENDPOINT:-https://hf-mirror.com}"
+HF_ENDPOINT="https://hf-mirror.com"
 HFD="${HOME}/hfd.sh"
 
 export HF_ENDPOINT

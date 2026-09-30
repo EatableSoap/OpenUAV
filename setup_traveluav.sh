@@ -7,8 +7,8 @@ set -e
 # Ubuntu 22.04 + CUDA 11.8 + Python 3.10
 # ============================================================
 
-BASE_DIR="${BASE_DIR:-/root/autodl-tmp}"
-TRAVEL_ROOT="${BASE_DIR}/TravelUAV"
+BASE_DIR="${BASE_DIR:$HOME/liu021/Exp}"
+TRAVEL_ROOT="${BASE_DIR}/OpenUAV"
 
 CONDA_ENV="llamauav"
 
@@ -105,7 +105,7 @@ python -V
 
 python -m pip install --upgrade \
     "pip<25" \
-    setuptools \
+    "setuptools<82.0.0" \
     wheel \
     packaging
 
@@ -133,7 +133,7 @@ echo ">>> [5/7] Installing LLaMA-UAV..."
 
 cd "${TRAVEL_ROOT}/Model/LLaMA-UAV"
 
-python -m pip install -e .
+python -m pip install -e . -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 python -m pip install ninja
 
@@ -178,7 +178,7 @@ cd "${TRAVEL_ROOT}"
 # AirSim needs numpy to exist during setup.
 python -m pip install \
     numpy==1.26.3 \
-    setuptools \
+    "setuptools<82.0.0" \
     wheel
 
 # Install AirSim separately without isolated build.

@@ -11,7 +11,7 @@ dist
 *.jsonl
 
 # Data
-data/
+data/train_dataset/*
 # Editor
 .idea
 *.swp
@@ -21,7 +21,6 @@ data/
 wandb
 output
 work_dirs
-data
 model_zoo
 settings
 checkpoints

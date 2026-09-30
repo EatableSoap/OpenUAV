@@ -6,12 +6,12 @@ set -euo pipefail
 # ============================================================
 
 # !!!!! 按你的实际项目根目录修改 !!!!!
-TRAVEL_ROOT="/root/autodl-tmp/OpenUAV"
+TRAVEL_ROOT="$HOME/Exp/OpenUAV"
 
 # 如果你实际项目目录就是 OpenUAV，则改成：
 # TRAVEL_ROOT="/root/autodl-tmp/OpenUAV"
 
-DOWNLOAD_ROOT="/root/autodl-tmp/downloads"
+DOWNLOAD_ROOT="$HOME/Downloads"
 
 RAW_DL="${DOWNLOAD_ROOT}/TravelUAV_NYC"
 ENV_DL="${DOWNLOAD_ROOT}/TravelUAV_env"
@@ -40,11 +40,11 @@ echo "============================================================"
 echo
 echo ">>> [0/6] Installing tools..."
 
-apt-get update
-apt-get install -y \
-    aria2 \
-    jq \
-    p7zip-full
+# sudo apt-get update
+# sudo apt-get install -y \
+#  aria2 \
+#    jq \
+#    p7zip-full
 
 if [ ! -f "${HFD}" ]; then
     echo "Downloading hfd.sh..."
@@ -74,7 +74,7 @@ mkdir -p \
     "${TRAIN_ROOT}" \
     "${ENV_ROOT}"
 
-df -h /root/autodl-tmp
+df -h $HOME
 
 
 # ============================================================
@@ -90,8 +90,8 @@ echo ">>> [2/6] Downloading NYCEnvironmentMegapa raw dataset..."
     --include 'NYCEnvironmentMegapa.*' \
     --local-dir "${RAW_DL}" \
     --tool aria2c \
-    -x 4 \
-    -j 2
+    -x 8 \
+    -j 4
 
 
 echo
@@ -109,11 +109,11 @@ echo ">>> [3/6] Downloading closeloop environments..."
 "${HFD}" \
     wangxiangyu0814/TravelUAV_env \
     --dataset \
-    --include 'closeloop_envs.*' \
+    --include 'closeloop_envs.*' 'carla_town_envs.*' \
     --local-dir "${ENV_DL}" \
     --tool aria2c \
-    -x 4 \
-    -j 2
+    -x 8 \
+    -j 4
 
 
 echo
