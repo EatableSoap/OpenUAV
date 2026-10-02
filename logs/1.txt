@@ -1,0 +1,28 @@
+2026-10-02 18:13:16,929 [INFO] - 
+Starting analysis for type: eval_test
+2026-10-02 18:13:16,929 [INFO] - 
+Analyzing for path type: full
+2026-10-02 18:13:16,929 [INFO] - Success Rate (SR): 21.87%
+2026-10-02 18:13:16,929 [INFO] - Oracle Success Rate (OSR): 44.92%
+Calculating NE: 100%|███████████████████████████████████████████████| 256/256 [00:00<00:00, 1025.45it/s]
+2026-10-02 18:13:17,182 [INFO] - Average Normalized Error (NE): 105.94
+Calculating SPL: 100%|███████████████████████████████████████████████| 256/256 [00:00<00:00, 378.47it/s]
+2026-10-02 18:13:17,859 [INFO] - Average Success Path Length (SPL): 18.94%
+2026-10-02 18:13:17,859 [INFO] - 
+Analyzing for path type: easy
+Splitting data: 100%|████████████████████████████████████████████████| 256/256 [00:00<00:00, 679.79it/s]
+2026-10-02 18:13:18,236 [INFO] - Success Rate (SR): 21.43%
+2026-10-02 18:13:18,236 [INFO] - Oracle Success Rate (OSR): 50.00%
+Calculating NE: 100%|█████████████████████████████████████████████████| 56/56 [00:00<00:00, 1812.13it/s]
+2026-10-02 18:13:18,267 [INFO] - Average Normalized Error (NE): 61.31
+Calculating SPL: 100%|█████████████████████████████████████████████████| 56/56 [00:00<00:00, 769.64it/s]
+2026-10-02 18:13:18,340 [INFO] - Average Success Path Length (SPL): 17.43%
+2026-10-02 18:13:18,340 [INFO] - 
+Analyzing for path type: hard
+Splitting data: 100%|████████████████████████████████████████████████| 256/256 [00:00<00:00, 700.03it/s]
+2026-10-02 18:13:18,706 [INFO] - Success Rate (SR): 22.00%
+2026-10-02 18:13:18,706 [INFO] - Oracle Success Rate (OSR): 43.50%
+Calculating NE: 100%|████████████████████████████████████████████████| 200/200 [00:00<00:00, 987.50it/s]
+2026-10-02 18:13:18,909 [INFO] - Average Normalized Error (NE): 118.43
+Calculating SPL: 100%|███████████████████████████████████████████████| 200/200 [00:00<00:00, 379.18it/s]
+2026-10-02 18:13:19,436 [INFO] - Average Success Path Length (SPL): 19.37%

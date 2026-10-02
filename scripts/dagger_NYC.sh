@@ -1,7 +1,7 @@
 #!/bin/bash
 # change the dataset_path to your own path
 
-root_dir=/root/autodl-tmp/OpenUAV # TravelUAV directory
+root_dir=$HOME/Exp/OpenUAV # TravelUAV directory
 model_dir=$root_dir/Model/LLaMA-UAV
 
 CUDA_VISIBLE_DEVICES=0 
